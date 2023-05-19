@@ -32,7 +32,12 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "stylePreprocessorOptions": {
+                "includePaths": [
+                  "./src/assets/styles"
+                ]
+            }
           },
           "configurations": {
             "production": {
@@ -47,6 +52,13 @@
                   "maximumWarning": "2kb",
                   "maximumError": "4kb"
                 }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+                
               ],
               "outputHashing": "all"
             },
@@ -100,5 +112,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "1fb70044-a6e8-49b7-a1d6-c86e9f3cda8b"
   }
 }
